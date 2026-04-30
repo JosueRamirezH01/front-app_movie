@@ -170,7 +170,7 @@ class _ContinueWatchingSection extends ConsumerWidget {
 
     return continueAsync.when(
       loading: () => const SizedBox.shrink(),
-      error: (_, __) => const SizedBox.shrink(),
+      error: (_, _) => const SizedBox.shrink(),
       data: (episodes) {
         if (episodes.isEmpty) return const SizedBox.shrink();
         return Column(
@@ -195,7 +195,7 @@ class _ContinueWatchingSection extends ConsumerWidget {
                 scrollDirection: Axis.horizontal,
                 padding: const EdgeInsets.symmetric(horizontal: 20),
                 itemCount: episodes.length,
-                separatorBuilder: (_, __) => const SizedBox(width: 12),
+                separatorBuilder: (_, _) => const SizedBox(width: 12),
                 itemBuilder: (context, i) {
                   final ep = episodes[i];
                   return GestureDetector(
@@ -239,7 +239,7 @@ class _ContinueCard extends StatelessWidget {
                   Image.network(
                     episode.thumbnailUrl,
                     fit: BoxFit.cover,
-                    errorBuilder: (_, __, ___) => Container(
+                    errorBuilder: (_, _, _) => Container(
                       color: AppTheme.surfaceVariant,
                       child: const Icon(Icons.play_circle_outline_rounded,
                           color: AppTheme.textMuted),
@@ -342,7 +342,7 @@ class _AllProgramsSection extends ConsumerWidget {
       childAspectRatio: 0.65,
     ),
     itemCount: 6,
-    itemBuilder: (_, __) => const ShimmerCard(borderRadius: 8),
+    itemBuilder: (_, _) => const ShimmerCard(borderRadius: 8),
   );
 }
 

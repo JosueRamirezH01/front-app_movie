@@ -239,7 +239,7 @@ class HiveLocalDataSource implements LocalDataSource {
           ..episodeNumber = ep
           ..title = 'Ep. $ep: ${episodeTitles[titleIdx]}'
           ..description = 'Un episodio brutal lleno de humor, caos y momentos que no olvidarás. Temporada ${season.seasonNumber}, episodio $ep.'
-          ..thumbnailUrl = 'https://picsum.photos/seed/${id}/640/360'
+          ..thumbnailUrl = 'https://picsum.photos/seed/$id/640/360'
           ..bunnyVideoId = 'demo-video-id-$id'
           ..bunnyLibraryId = '12345'
           ..durationSeconds = 1800 + (ep * 120)
